@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="media.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Sample</title>
+</head>
+<body>
+    <main>
+        <div class="video-container">
+            <div>
+            </div>
+            <video class="video_bg" id="video-mp4" playsinline preload="auto">
+                <source src="video/together.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="video-controls">
+            <div>
+                <h2>video controls</h2>
+                <button id="ctrl-play-pause">play/pause</button>
+                <button id="ctrl-video-reset">reset video</button>
+                <button id="ctrl-instr-reset">reset instruments</button>
+            </div>
+            <div>
+                <h2>your configuration: <span id="instr-code"></span></h2>
+            </div>
+        </div>
+
+        <div class="controls-container">
+            <section class="ctrl guitar">
+                <h3>guitar</h3>
+                <div class="ctrl-sect">
+                    <label for="opt-guitar">voice:</label>
+                    <br>
+                    <select id="opt-guitar">
+                        <option value="0" name="maranello" selected>maranello</option>
+                        <option value="1" name="mystery">mystery</option>
+                        <option value="2" name="new-wave">new-wave</option>
+                        <option value="3" name="us-metal">us-metal</option>
+                    </select>
+                </div>
+                <div class="ctrl-sect slider-contain">
+                    <label for="vol-guitar">volume:</label>
+                    <br>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="vol-guitar">
+                </div>
+            </section>
+
+            <section class="ctrl drums">
+                <h3>drums</h3>
+                <div class="ctrl-sect">
+                    <label for="opt-drums">voice:</label>
+                    <br>
+                    <select id="opt-drums">
+                        <option value="0" name="east-bay" selected>east-bay</option>
+                        <option value="1" name="after-party">after-party</option>
+                        <option value="2" name="electronic-pop">electronic-pop</option>
+                        <option value="3" name="liverpool">liverpool</option>
+                    </select>
+                </div>
+                <div class="ctrl-sect">
+                    <label for="vol-drums">volume:</label>
+                    <br>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="vol-drums">
+                </div>
+            </section>
+
+            <section class="ctrl midi">
+                <h3>midi</h3>
+                <div class="ctrl-sect">
+                    <label for="opt-midi">voice:</label>
+                    <br>
+                    <select id="opt-midi">
+                        <option value="0" name="bbb" selected>bbb</option>
+                        <option value="1" name="chemtrails">chemtrails</option>
+                        <option value="2" name="metallic">metallic</option>
+                        <option value="3" name="murky">murky</option>
+                    </select>
+                </div>
+                <div class="ctrl-sect">
+                    <label for="vol-midi">volume:</label>
+                    <br>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="vol-midi">
+                </div>
+            </section>
+
+            <section class="ctrl bass">
+                <h3>bass</h3>
+                <div class="ctrl-sect">
+                    <label for="opt-bass">voice:</label>
+                    <br>
+                    <select id="opt-bass">
+                        <option value="0" name="pretty-good" selected>pretty-good</option>
+                        <option value="1" name="60s-combo">60s-combo</option>
+                        <option value="2" name="flange-stereo">flange-stereo</option>
+                        <option value="3" name="maranello">maranello</option>
+                    </select>
+                </div>
+                <div class="ctrl-sect">
+                    <label for="vol-bass">volume:</label>
+                    <br>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="vol-bass">
+                </div>
+            </section>
+
+        </div>
+    </main>
+<script src="js.js" defer></script>
+</body>
+</html>
